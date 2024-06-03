@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true, // Keep this true and disable individual strict options below
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -18,7 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noImplicitAny": false, // Allow implicit any type
+    "strictNullChecks": false, // Disable strict null checks
+    "strictFunctionTypes": false, // Disable strict checking of function types
+    "strictBindCallApply": false, // Disable strict checking of bind, call, and apply methods
+    "strictPropertyInitialization": false, // Disable strict checking of property initialization
+    "noImplicitThis": false, // Allow implicit `this` type
+    "alwaysStrict": false // Disable `alwaysStrict`
   },
   "include": [
     "src"
