@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import GoogleTranslate from '../googleTranslate/GoogleTranslate';
+
 
 function Navbar() {
   const navigate = useNavigate();
@@ -59,15 +59,13 @@ function Navbar() {
              
               
               <select className="border border-gray-300 rounded-md px-3 py-2 w-full sm:w-auto">
-                <option value="">Filter</option>
+                <option value="">Sort By</option>
                
                 <option value="cheapest">From Cheapest</option>
          
                 <option value="youngest">From Youngest</option>
               </select>
-              {/* <div style={{ display: 'flex', alignItems: 'center' }}>
-                <GoogleTranslate />
-              </div> */}
+            
               {login ? (
                 <button
                   onClick={handleProfileClick}
@@ -92,7 +90,7 @@ function Navbar() {
                 </>
               )}
             </div>
-            {/* <GoogleTranslate /> */}
+           
           </div>
         </div>
       </div>
