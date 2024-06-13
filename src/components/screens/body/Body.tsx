@@ -12,7 +12,7 @@ const MainBody = () => {
       method: "GET",
       redirect: "follow" as RequestRedirect, // Set the correct type
     };
-  
+
     fetch(`https://hongkongbackend.vercel.app/v1/profile?city=${selectedDistrict}`, requestOptions)
       .then((response) => response.text())
       .then((result) => {
@@ -122,19 +122,15 @@ const MainBody = () => {
 
   return (
     <div className="flex w-[100%] ">
-      {/* First section with 25% width */}
-
-
-      {/* Second section with 50% width */}
       <div className="w-[100%] py-2 px-4 ">
         <div className='flex justify-between py-2'>
-        <button className="bg-gradient-to-r from-secondary to-blue text-white px-2 py-1 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300 ease-in-out">
+          {/* <button className="bg-gradient-to-r from-secondary to-blue text-white px-2 py-1 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300 ease-in-out">
             <p className='text-[14px]'>All Premimum Escort</p>
-          </button>
+          </button> */}
           <div className="flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:flex-wrap md:flex-nowrap md:space-x-2">
-           
-           
-           
+
+
+
             <select className="border border-gray-300 rounded-md px-3 py-2 w-full sm:w-auto"
               onChange={handleDistrictChange}
               value={selectedDistrict}
@@ -165,13 +161,13 @@ const MainBody = () => {
             >
               Search
             </button>
-          
+
 
           </div>
-          
+
 
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5">
           {data.map((escort) => (
             <EscortServiceCard key={escort.id} {...escort} />
           ))}
@@ -181,7 +177,7 @@ const MainBody = () => {
       </div>
 
       {/* Third section with 25% width */}
-      <div className="w-[15%] py-2 border border-secondary bg-black"></div>
+      {/* <div className="w-[15%] py-2 border border-secondary bg-black"></div> */}
     </div>
 
   )

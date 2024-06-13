@@ -77,11 +77,11 @@ const ProfileArea = () => {
   return (
     <div className="flex w-[100%] bg-halfWhite">
       {/* First section with 20% width */}
-      <div className="w-[20%] py-2 border border-secondary">
-        <h2 className="px-4 font-normal text-primary text-[18px]">
-          Dubai Russian Escorts <br /> Location:
+      <div className="w-[20%] py-2 bg-primary">
+        <h2 className="px-4 font-normal text-white text-[18px]">
+          Advertisment Area
         </h2>
-        <ul className="px-4">
+        {/* <ul className="px-4">
           {link.map((link) => (
             <li className="py-2" key={link.id}>
               <a href={link.name} className="text-blue text-blue-700 ">
@@ -89,7 +89,7 @@ const ProfileArea = () => {
               </a>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
 
       {/* Second section with 65% width */}

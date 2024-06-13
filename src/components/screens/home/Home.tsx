@@ -1,3 +1,4 @@
+import Footer from '../../googleTranslate/footer'
 import Navbar from '../../navbar/Navbar'
 import MainSlider from '../../slider/Slider'
 import MainBody from '../body/Body'
@@ -10,8 +11,6 @@ export const Home = () => {
     <Navbar />
     <MainSlider />
     <MainBody />
-    {/* <SecondBody /> */}
-
     </>
   )
 }

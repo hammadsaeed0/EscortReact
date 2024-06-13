@@ -72,24 +72,24 @@ const EscortRegister = () => {
       
         // Create the data to be sent, including only selected services
         const dataToSend = {
-          username: formData.username,
+        //   username: formData.username,
           email: formData.email,
           password: formData.password,
           phone: formData.phone,
-          website: formData.website,
-          name: formData.name,
-          city: formData.city,
-          about: formData.about,
-          gender: formData.gender,
-          country: formData.country,
-          ethnicity: formData.ethnicity,
-          look: formData.look,
-          hairLength: formData.hair,
-          bustSize: formData.bust,
-          availability: formData.availability,
-          currency: formData.currency,
-          services: selectedServices,
-          extraServices: formData.extra,
+        //   website: formData.website,
+        //   name: formData.name,
+        //   city: formData.city,
+        //   about: formData.about,
+        //   gender: formData.gender,
+        //   country: formData.country,
+        //   ethnicity: formData.ethnicity,
+        //   look: formData.look,
+        //   hairLength: formData.hair,
+        //   bustSize: formData.bust,
+        //   availability: formData.availability,
+        //   currency: formData.currency,
+        //   services: selectedServices,
+        //   extraServices: formData.extra,
         };
       
         const myHeaders = new Headers();
@@ -119,22 +119,6 @@ const EscortRegister = () => {
           .catch((error) => console.error(error));
       };
 
-    const link = [
-        { id: 1, name: "Abu Al Abyad Russian Escort Service" },
-        { id: 2, name: "Russian Call Girls Abu Al Abyad" },
-        { id: 3, name: "Abu Dhabi Airport Road Russian Escort Service" },
-        { id: 4, name: "Abu Dhabi Capital District Russian Escort Service" },
-        { id: 5, name: "Abu Dhabi Corniche Area Russian Escort Service" },
-        { id: 6, name: "Abu Dhabi Eastern Road Russian Escort Service" },
-        { id: 7, name: "Abu Dhabi Gate City Russian Escort Service" },
-        { id: 8, name: "Abu Dhabi Russian Escort Service" },
-        { id: 9, name: "Abu Dhabi Villa Compound Russian Escort Service" },
-        { id: 10, name: "Academic City Russian Escort Service" },
-        { id: 11, name: "Airport Street Russian Escort Service" },
-        { id: 12, name: "Ajman Russian Escort Service" },
-        { id: 13, name: "Al Adla City Russian Escort Service" },
-        { id: 14, name: "Al Ain Russian Escort Service" },
-    ];
 
     const handleServiceChange = (e) => {
         const { name, checked } = e.target;
@@ -155,19 +139,9 @@ const EscortRegister = () => {
             <div className="flex w-[100%] bg-halfWhite">
                 <Toaster />
                 {/* First section with 25% width */}
-                <div className="w-[20%] py-2 border border-secondary">
-                    <h2 className="px-4 font-normal text-primary text-[18px]">
-                        Dubai Russian Escorts <br /> Location:
-                    </h2>
-                    <ul className="px-4">
-                        {link.map((link) => (
-                            <li className="py-2" key={link.id}>
-                                <a href={link.name} className="text-blue text-blue-700 ">
-                                    {link.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="w-[20%] py-2 border bg-primary">
+                    
+                
                 </div>
 
                 {/* Second section with 50% width */}
@@ -178,7 +152,7 @@ const EscortRegister = () => {
                         </h1>
                         <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
                             {/* Username */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="username"
                                     className="block text-sm font-medium text-gray-700"
@@ -194,7 +168,7 @@ const EscortRegister = () => {
                                     autoComplete="off"
                                     className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
-                            </div>
+                            </div> */}
 
                             {/* Email */}
                             <div className="mb-4">
@@ -252,7 +226,7 @@ const EscortRegister = () => {
                             </div>
 
                             {/* Website */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="website"
                                     className="block text-sm font-medium text-gray-700"
@@ -267,10 +241,10 @@ const EscortRegister = () => {
                                     onChange={handleChange}
                                     className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
-                            </div>
+                            </div> */}
 
                             {/* Name */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="name"
                                     className="block text-sm font-medium text-gray-700"
@@ -285,7 +259,7 @@ const EscortRegister = () => {
                                     onChange={handleChange}
                                     className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
-                            </div>
+                            </div> */}
 
                             {/* City */}
                             {/* <div className="mb-4">
@@ -306,7 +280,7 @@ const EscortRegister = () => {
                             </div> */}
 
                             {/* About */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="about"
                                     className="block text-sm font-medium text-gray-700"
@@ -321,10 +295,10 @@ const EscortRegister = () => {
                                     // rows= 4,
                                     className="mt-1 lg:h-40 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 ></textarea>
-                            </div>
+                            </div> */}
 
                             {/* Gender */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <span className="block text-sm font-medium text-gray-700">
                                     Gender
                                 </span>
@@ -360,10 +334,10 @@ const EscortRegister = () => {
 
 
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Country */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="country"
                                     className="block text-sm font-medium text-gray-700"
@@ -380,10 +354,10 @@ const EscortRegister = () => {
                                     <option value="">Select Country</option>
                                     <option value="Hongkong">Hong Kong</option>
                                 </select>
-                            </div>
+                            </div> */}
 
                             {/* District */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="district"
                                     className="block text-sm font-medium text-gray-700"
@@ -417,7 +391,7 @@ const EscortRegister = () => {
                                     <option value="Tuen Mun District">Tuen Mun District</option>
                                     <option value="Yuen Long District">Yuen Long District</option>
                                 </select>
-                            </div>
+                            </div> */}
 
                             {/* Date of Birth */}
                             <div className="mb-4">
@@ -506,7 +480,7 @@ const EscortRegister = () => {
                             </div>
 
                             {/* Ethnicity */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="country"
                                     className="block text-sm font-medium text-gray-700"
@@ -528,13 +502,13 @@ const EscortRegister = () => {
                                     <option value="MiddleEast">MiddleEast</option>
                                     <option value="Asian">Asian</option>
 
-                                    {/* Add more country options here */}
+                               
                                 </select>
-                            </div>
+                            </div> */}
 
 
                             {/* Look */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="country"
                                     className="block text-sm font-medium text-gray-700"
@@ -553,13 +527,13 @@ const EscortRegister = () => {
                                     <option value="Average">Average</option>
                                     <option value="Sexy">Sexy</option>
                                     <option value="UltraSexy">Ultra Sexy</option>
-                                    {/* Add more country options here */}
+                                    
                                 </select>
-                            </div>
+                            </div> */}
 
 
                             {/* Hair */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="country"
                                     className="block text-sm font-medium text-gray-700"
@@ -577,13 +551,13 @@ const EscortRegister = () => {
                                     <option value="bold">Bold</option>
                                     <option value="long">Long</option>
                                     <option value="short">Short</option>
-                                    {/* Add more country options here */}
+                                    
                                 </select>
-                            </div>
+                            </div> */}
 
 
                             {/* Bust */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="country"
                                     className="block text-sm font-medium text-gray-700"
@@ -602,12 +576,12 @@ const EscortRegister = () => {
                                     <option value="Small">Small</option>
                                     <option value="Medium">Medium</option>
                                     <option value="Large">Large</option>
-                                    {/* Add more country options here */}
+                                   
                                 </select>
-                            </div>
+                            </div> */}
 
                             {/* Availability */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <span className="block text-sm font-medium text-gray-700">
                                     Availability
                                 </span>
@@ -641,11 +615,11 @@ const EscortRegister = () => {
                                         Out Call
                                     </label>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Select Currency  */}
 
-                            <div className="mb-8">
+                            {/* <div className="mb-8">
                                 <label
                                     htmlFor="currency"
                                     className="block text-sm font-medium text-gray-700"
@@ -681,10 +655,10 @@ const EscortRegister = () => {
                                     <option value="ZAR">South African Rand (ZAR)</option>
                                     <option value="HKD">Hong Kong Dollar (HKD)</option>
                                 </select>
-                            </div>
+                            </div> */}
 
                             {/* Services  */}
-                            <div className="mb-8">
+                            {/* <div className="mb-8">
                                 <h2 className="text-lg font-medium text-gray-700 mb-2">Services</h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {Object.entries(formData.services).map(([service, checked]) => (
@@ -701,9 +675,9 @@ const EscortRegister = () => {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
                             {/* Website */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label
                                     htmlFor="website"
                                     className="block text-sm font-medium text-gray-700"
@@ -718,7 +692,7 @@ const EscortRegister = () => {
                                     onChange={handleChange}
                                     className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
-                            </div>
+                            </div> */}
                             {/* Submit Button */}
                             <div className="text-center">
                                 <button
