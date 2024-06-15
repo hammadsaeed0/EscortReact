@@ -97,7 +97,8 @@ const MainBody = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const EscortServiceCard = ({ _id, image, country, phone, city }) => {
+  const EscortServiceCard = ({ _id, image, country, phone, city, 
+    name ,   age   }) => {
     const defaultImage = "https://thumbs.dreamstime.com/b/profile-placeholder-default-avatar-girl-vector-136460496.jpg";
 
     const cardStyle = {
@@ -109,10 +110,10 @@ const MainBody = () => {
     return (
       <Link to={`/profile/${_id}`} className="w-full md:w-1/2 lg:w-[250px] mb-4 bg-halfWhite">
         <div className="bg-white overflow-hidden shadow-md h-[300px] border border-yellwo rounded" style={cardStyle}>
-          <div className="p-2 h-[100px] bg-secondary mt-[85%] bg-opacity-60 flex flex-col items-center cursor-pointer hover:bg-opacity-80">
-            <p className="text-[18px] text-white mb-2">{country} {phone}</p>
-            <p className="text-[10px] text-white mb-2">{city}, {country}</p>
-            <p className="text-[10px] text-white mb-2">Dubai Model Town, Hong Kong</p>
+          <div className="p-2 h-[70px] bg-secondary mt-[95%] bg-opacity-60 flex flex-col items-center cursor-pointer hover:bg-opacity-80">
+            <p className="text-[18px] text-white mb-2">{name}</p>
+            <p className="text-[15px] text-white mb-1">Age: {age}</p>
+            {/* <p className="text-[10px] text-white mb-2">Dubai Model Town, Hong Kong</p> */}
           </div>
         </div>
       </Link>
@@ -161,7 +162,11 @@ const MainBody = () => {
             >
               Search
             </button>
-
+            <div className='w-[300px] h-10 flex items-center justify-between'>
+              <p className='text-blue'>Sex Offer</p>
+              <p className='text-blue'>Sex Meeting</p>
+              <p className='text-blue'>Sex Dating</p>
+            </div>
 
           </div>
 
@@ -169,7 +174,11 @@ const MainBody = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5">
           {data.map((escort) => (
+           <>
+            {console.log(escort)}
+            
             <EscortServiceCard key={escort.id} {...escort} />
+            </>
           ))}
         </div>
         {/* ----------------------------------------------------------------------- */}

@@ -20,6 +20,7 @@ const EscortEditProfile = () => {
         country: "",
         ethnicity: "",
         look: "",
+        age: "",
         hair: "",
         bust: "",
         currency: "",
@@ -43,7 +44,7 @@ const EscortEditProfile = () => {
       
         const dataToSend = {
           username: formData.username,
-          email: formData.email,
+        //   email: formData.email,
           password: formData.password,
           phone: formData.phone,
           website: formData.website,
@@ -59,12 +60,15 @@ const EscortEditProfile = () => {
           availability: formData.availability,
           currency: formData.currency,
           extraServices: formData.extra,
+          age: formData.age,
         };
+  
       
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
       
         const raw = JSON.stringify(dataToSend);
+      console.log(raw);
       
         const requestOptions: RequestInit = {
           method: "POST",
@@ -76,30 +80,37 @@ const EscortEditProfile = () => {
         fetch(`https://hongkongbackend.vercel.app/v1/update-profile/${id}`, requestOptions)
           .then((response) => response.text())
           .then((result) => {
+            console.log(raw);
+
+            
             let data = JSON.parse(result);
             if (data.success === true) {
+                console.log(data);
+                
               navigate("/escortProfile");
             } else {
+                console.log(data);
+                
               alert("Something Went Wrong");
             }
           })
           .catch((error) => console.error(error));
       };
     const link = [
-        { id: 1, name: "Abu Al Abyad Russian Escort Service" },
-        { id: 2, name: "Russian Call Girls Abu Al Abyad" },
-        { id: 3, name: "Abu Dhabi Airport Road Russian Escort Service" },
-        { id: 4, name: "Abu Dhabi Capital District Russian Escort Service" },
-        { id: 5, name: "Abu Dhabi Corniche Area Russian Escort Service" },
-        { id: 6, name: "Abu Dhabi Eastern Road Russian Escort Service" },
-        { id: 7, name: "Abu Dhabi Gate City Russian Escort Service" },
-        { id: 8, name: "Abu Dhabi Russian Escort Service" },
-        { id: 9, name: "Abu Dhabi Villa Compound Russian Escort Service" },
-        { id: 10, name: "Academic City Russian Escort Service" },
-        { id: 11, name: "Airport Street Russian Escort Service" },
-        { id: 12, name: "Ajman Russian Escort Service" },
-        { id: 13, name: "Al Adla City Russian Escort Service" },
-        { id: 14, name: "Al Ain Russian Escort Service" },
+        // { id: 1, name: "Abu Al Abyad Russian Escort Service" },
+        // { id: 2, name: "Russian Call Girls Abu Al Abyad" },
+        // { id: 3, name: "Abu Dhabi Airport Road Russian Escort Service" },
+        // { id: 4, name: "Abu Dhabi Capital District Russian Escort Service" },
+        // { id: 5, name: "Abu Dhabi Corniche Area Russian Escort Service" },
+        // { id: 6, name: "Abu Dhabi Eastern Road Russian Escort Service" },
+        // { id: 7, name: "Abu Dhabi Gate City Russian Escort Service" },
+        // { id: 8, name: "Abu Dhabi Russian Escort Service" },
+        // { id: 9, name: "Abu Dhabi Villa Compound Russian Escort Service" },
+        // { id: 10, name: "Academic City Russian Escort Service" },
+        // { id: 11, name: "Airport Street Russian Escort Service" },
+        // { id: 12, name: "Ajman Russian Escort Service" },
+        // { id: 13, name: "Al Adla City Russian Escort Service" },
+        // { id: 14, name: "Al Ain Russian Escort Service" },
     ];
 
 
@@ -141,9 +152,9 @@ const EscortEditProfile = () => {
                 <Toaster />
                 {/* First section with 25% width */}
                 <div className="w-[20%] py-2 border border-secondary">
-                    <h2 className="px-4 font-normal text-primary text-[18px]">
+                    {/* <h2 className="px-4 font-normal text-primary text-[18px]">
                         Dubai Russian Escorts <br /> Location:
-                    </h2>
+                    </h2> */}
                     <ul className="px-4">
                         {link.map((link) => (
                             <li className="py-2" key={link.id}>
@@ -285,6 +296,23 @@ const EscortEditProfile = () => {
                                     id="city"
                                     name="city"
                                     value={formData.city}
+                                    onChange={handleChange}
+                                    className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                />
+                            </div>
+{/* Age  */}
+                            <div className="mb-4">
+                                <label
+                                    htmlFor="age"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Age
+                                </label>
+                                <input
+                                    type="text"
+                                    id="age"
+                                    name="age"
+                                    value={formData.age}
                                     onChange={handleChange}
                                     className="mt-1 lg:h-10 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />

@@ -57,20 +57,20 @@ const EscortProfile = () => {
       }, []);
 
     const link = [
-        { id: 1, name: "Abu Al Abyad Russian Escort Service" },
-        { id: 2, name: "Russian Call Girls Abu Al Abyad" },
-        { id: 3, name: "Abu Dhabi Airport Road Russian Escort Service" },
-        { id: 4, name: "Abu Dhabi Capital District Russian Escort Service" },
-        { id: 5, name: "Abu Dhabi Corniche Area Russian Escort Service" },
-        { id: 6, name: "Abu Dhabi Eastern Road Russian Escort Service" },
-        { id: 7, name: "Abu Dhabi Gate City Russian Escort Service" },
-        { id: 8, name: "Abu Dhabi Russian Escort Service" },
-        { id: 9, name: "Abu Dhabi Villa Compound Russian Escort Service" },
-        { id: 10, name: "Academic City Russian Escort Service" },
-        { id: 11, name: "Airport Street Russian Escort Service" },
-        { id: 12, name: "Ajman Russian Escort Service" },
-        { id: 13, name: "Al Adla City Russian Escort Service" },
-        { id: 14, name: "Al Ain Russian Escort Service" },
+        // { id: 1, name: "Abu Al Abyad Russian Escort Service" },
+        // { id: 2, name: "Russian Call Girls Abu Al Abyad" },
+        // { id: 3, name: "Abu Dhabi Airport Road Russian Escort Service" },
+        // { id: 4, name: "Abu Dhabi Capital District Russian Escort Service" },
+        // { id: 5, name: "Abu Dhabi Corniche Area Russian Escort Service" },
+        // { id: 6, name: "Abu Dhabi Eastern Road Russian Escort Service" },
+        // { id: 7, name: "Abu Dhabi Gate City Russian Escort Service" },
+        // { id: 8, name: "Abu Dhabi Russian Escort Service" },
+        // { id: 9, name: "Abu Dhabi Villa Compound Russian Escort Service" },
+        // { id: 10, name: "Academic City Russian Escort Service" },
+        // { id: 11, name: "Airport Street Russian Escort Service" },
+        // { id: 12, name: "Ajman Russian Escort Service" },
+        // { id: 13, name: "Al Adla City Russian Escort Service" },
+        // { id: 14, name: "Al Ain Russian Escort Service" },
     ];
 
     const rates = [
